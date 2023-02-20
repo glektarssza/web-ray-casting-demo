@@ -1,0 +1,59 @@
+name: Deploy
+on:
+  push:
+    tags:
+      - v*
+concurrency:
+  group: deploy-github-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - id: checkout
+        name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+          lfs: true
+      - id: setup-nodejs
+        name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19
+      - id: setup-pnpm
+        name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - id: install
+        name: Install
+        run: pnpm install --frozen-lockfile
+      - id: build
+        name: Build
+        run: pnpm run --filter @glektarssza/webcraft... build
+      - id: upload-artifacts
+        name: Upload artifacts
+        uses: actions/upload-pages@v1
+        with:
+          path: ./app/dist
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      pages: write
+      id-token: write
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{steps.deploy.outputs.page_url}}}
+    steps:
+      - id: deploy
+        name: Deploy
+        uses: actions/deploy-pages@v1
