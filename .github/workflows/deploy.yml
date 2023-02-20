@@ -25,17 +25,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 19
-      - id: setup-pnpm
-        name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
+          cache: npm
       - id: install
         name: Install
-        run: pnpm install --frozen-lockfile
+        run: npm install
       - id: build
         name: Build
-        run: pnpm run --filter @glektarssza/webcraft... build
+        run: npm run build
       - id: upload-artifacts
         name: Upload artifacts
         uses: actions/upload-pages@v1
