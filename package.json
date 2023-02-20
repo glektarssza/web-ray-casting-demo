@@ -18,7 +18,17 @@
         "url": "https://github.com/glektarssza/web-ray-casting-demo"
     },
     "keywords": [],
-    "scripts": {},
+    "scripts": {
+        "lint": "eslint --ext .ts ./src/ts/",
+        "dev": "webpack-dev-server --config-name dev",
+        "build": "pnpm run build:prod",
+        "build:prod": "webpack-cli --config-name prod",
+        "build:dev": "webpack-cli --config-name dev",
+        "clean": "rimraf ./dist/",
+        "rebuild": "pnpm run clean && pnpm run build",
+        "rebuild:prod": "pnpm run clean && pnpm run build:prod",
+        "rebuild:dev": "pnpm run clean && pnpm run build:dev"
+    },
     "devDependencies": {
         "@types/node": "^18.14.0",
         "@typescript-eslint/eslint-plugin": "^5.52.0",
