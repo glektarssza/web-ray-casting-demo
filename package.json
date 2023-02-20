@@ -1,0 +1,24 @@
+{
+    "name": "web-ray-casting-demo",
+    "description": "A simple web application that demonstrates how ray casting works.",
+    "version": "0.0.0",
+    "license": "MIT",
+    "private": true,
+    "author": {
+        "name": "G'lek Tarssza",
+        "email": "glek@glektarssza.com",
+        "url": "http://glektarssza.com"
+    },
+    "homepage": "http://glektarssza.github.io/web-ray-casting-demo",
+    "bugs": {
+        "url": "https://github.com/glektarssza/web-ray-casting-demo/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/glektarssza/web-ray-casting-demo"
+    },
+    "keywords": [],
+    "scripts": {},
+    "dependencies": {},
+    "devDependencies": {}
+}
