@@ -36,7 +36,7 @@
         "css-loader": "^6.7.3",
         "cssnano": "^5.1.15",
         "enhanced-resolve": "^5.12.0",
-        "eslint-config-prettier": "^8.6.0",
+        "eslint-config-prettier": "^8.7.0",
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-tsdoc": "^0.2.17",
         "eslint-webpack-plugin": "^4.0.0",
