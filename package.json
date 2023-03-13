@@ -48,7 +48,7 @@
         "pug-plugin": "^4.9.7",
         "rimraf": "^4.4.0",
         "sass-loader": "^13.2.0",
-        "sass": "^1.58.3",
+        "sass": "^1.59.2",
         "source-map-loader": "^4.0.1",
         "ts-loader": "^9.4.2",
         "ts-node": "^10.9.1",
