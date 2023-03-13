@@ -40,7 +40,7 @@
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-tsdoc": "^0.2.17",
         "eslint-webpack-plugin": "^4.0.0",
-        "eslint": "^8.35.0",
+        "eslint": "^8.36.0",
         "fork-ts-checker-webpack-plugin": "^8.0.0",
         "postcss-loader": "^7.0.2",
         "postcss": "^8.4.21",
